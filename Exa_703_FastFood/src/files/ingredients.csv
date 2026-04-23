@@ -1,0 +1,51 @@
+name,calories,vegetarian
+Cheese,150,true
+Tomato,20,true
+Ham,100,false
+Water,0,true
+Sugar,50,true
+Lemon,10,true
+Lettuce,5,true
+Onion,30,true
+Bacon,120,false
+Chicken,110,false
+Egg,70,true
+Cucumber,10,true
+Mayonnaise,90,true
+Ketchup,80,true
+Mustard,60,true
+Jalapeno,15,true
+Pickles,10,true
+Beef,140,false
+Turkey,130,false
+Tofu,90,true
+Avocado,160,true
+Garlic,5,true
+Pepper,3,true
+Salt,0,true
+Chili,5,true
+Coriander,2,true
+Parsley,2,true
+Basil,1,true
+Mozzarella,120,true
+Olives,25,true
+Mushrooms,20,true
+Red Onion,25,true
+Spinach,15,true
+Zucchini,10,true
+Eggplant,30,true
+Peas,40,true
+Corn,70,true
+Carrot,25,true
+Radish,10,true
+Celery,5,true
+Green Pepper,15,true
+Yellow Pepper,15,true
+Red Pepper,15,true
+Ginger,5,true
+Mint,2,true
+Yogurt,50,true
+Cream,100,true
+Sour Cream,80,true
+Butter,100,true
+Oil,120,true

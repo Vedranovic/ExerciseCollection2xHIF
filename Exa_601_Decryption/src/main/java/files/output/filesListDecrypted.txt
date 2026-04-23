@@ -1,0 +1,10 @@
+The Caesar cipher is one of the oldest known encryption techniques.
+It was named after Julius Caesar, who used it to protect his military messages.
+This cipher works by shifting each letter in the plaintext by a fixed number of positions
+down the alphabet.
+
+For example, with a shift of 3, A becomes D,
+B becomes E, and so on. The Caesar cipher is easy to understand
+and implement but also easy to break with modern tools. Despite
+its simplicity, it remains a great introduction to the concept of
+encryption and helps demonstrate the basics of cryptographic thinking.

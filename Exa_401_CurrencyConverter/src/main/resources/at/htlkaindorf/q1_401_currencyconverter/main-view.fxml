@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.htlkaindorf.q1_401_currencyconverter.controller.AppController">
+   <children>
+      <HBox alignment="CENTER_RIGHT" spacing="5.0">
+         <children>
+            <Label text="Euro (€)">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="tfEuro" prefHeight="31.0" prefWidth="120.0">
+               <HBox.margin>
+                  <Insets right="10.0" top="10.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" spacing="5.0">
+         <children>
+            <Label text="Dollar ($)">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></Label>
+            <TextField fx:id="tfDollar" prefHeight="31.0" prefWidth="120.0">
+               <HBox.margin>
+                  <Insets right="10.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox spacing="5.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onEurToUsd" prefHeight="31.0" prefWidth="120.0" text="EUR -&gt; USD">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onUsdToEur" prefHeight="31.0" prefWidth="120.0" text="USD -&gt; EUR">
+               <HBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

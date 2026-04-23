@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 60%;
+    margin: 50px auto;
+
+    background-color: lightgray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    border: 2px solid darkgray;
+    padding: 15px;
+}
+
+#companyData, #invoiceDate {
+    text-align: right;
+}
+
+#companyData h1, #invoiceAddress h1 {
+    font-size: 1.5em;
+}
+
+#invoiceAddress {
+    text-align: left;
+}
+
+#products {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+th:nth-child(1) {
+    width: 10%;
+}
+
+th:nth-child(2) {
+    width: 40%;
+}
+
+th:nth-child(3) {
+    width: 15%;
+}
+
+tr {
+    border-bottom: 1px solid black;
+}
+
+td, th {
+    padding: 10px 5px;
+}
+
+tr:last-child {
+    font-weight: bolder;
+}

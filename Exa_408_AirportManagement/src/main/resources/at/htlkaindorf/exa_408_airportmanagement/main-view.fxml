@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.htlkaindorf.exa_408_airportmanagement.controller.AppController">
+   <children>
+      <GridPane prefHeight="174.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </VBox.margin>
+         <children>
+            <Label text="First Name:" />
+            <Label text="Last Name" GridPane.rowIndex="1" />
+            <Label text="Birth date:" GridPane.rowIndex="2" />
+            <TextField fx:id="tfFirstName" GridPane.columnIndex="1" />
+            <TextField fx:id="tfLastName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="tfBirthdate" promptText="dd.MM.yyyy" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <HBox alignment="CENTER" spacing="160.0">
+         <children>
+            <RadioButton fx:id="rbPassport" mnemonicParsing="false" text="Passport" />
+            <RadioButton fx:id="rdIDCard" mnemonicParsing="false" text="ID Card" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <GridPane prefHeight="154.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="lbIdOrPassport" />
+            <Label text="Baggage weight" GridPane.rowIndex="1" />
+            <Label text="Additional Price" GridPane.rowIndex="2" />
+            <TextField fx:id="tfVerificationForm" GridPane.columnIndex="1" />
+            <TextField fx:id="tfBaggageWeight" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="tfAdditionalPrice" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </VBox.margin>
+      </GridPane>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
+         <children>
+            <Button fx:id="btAdd" disable="true" mnemonicParsing="false" onAction="#onAdd" text="Add" />
+            <Button fx:id="btClear" mnemonicParsing="false" onAction="#onClear" text="CLEAR" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <TextArea fx:id="taOutput" prefHeight="200.0" prefWidth="200.0">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" />
+         </VBox.margin>
+      </TextArea>
+   </children>
+</VBox>

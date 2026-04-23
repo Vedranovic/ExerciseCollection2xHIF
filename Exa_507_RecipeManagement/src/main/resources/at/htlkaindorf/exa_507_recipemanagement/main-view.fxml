@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.htlkaindorf.exa_507_recipemanagement.controller.AppController">
+   <children>
+      <Label text="Recipe List">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Label>
+      <ListView fx:id="lvRecipes" prefHeight="200.0" prefWidth="200.0" />
+      <HBox alignment="CENTER" prefHeight="57.0" prefWidth="580.0" spacing="33.0">
+         <children>
+            <Button fx:id="btAddRecipe" mnemonicParsing="false" prefHeight="31.0" prefWidth="99.0" text="Add Recipe" />
+            <Button fx:id="btAddIngredients" mnemonicParsing="false" prefHeight="31.0" prefWidth="131.0" text="Add Ingredients" />
+            <Button fx:id="btDeleteRecipe" mnemonicParsing="false" prefHeight="31.0" prefWidth="115.0" text="Delete Recipe" />
+            <Button fx:id="btShowIngredients" mnemonicParsing="false" prefHeight="31.0" prefWidth="135.0" text="Show Ingredients" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <ListView fx:id="lvIngredients" prefHeight="200.0" prefWidth="200.0" />
+      <HBox alignment="CENTER" prefHeight="73.0" prefWidth="580.0" spacing="30.0">
+         <children>
+            <RadioButton fx:id="rbOrderDefault" mnemonicParsing="false" text="Order by default" />
+            <RadioButton fx:id="rbOrderAmount" mnemonicParsing="false" text="Order by amount" />
+            <RadioButton fx:id="rbOrderName" mnemonicParsing="false" text="Order by name" />
+         </children>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

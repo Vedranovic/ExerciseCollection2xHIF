@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.htlkaindorf.exa_504_channellist.controller.AppController">
+   <children>
+      <Button fx:id="btInit" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" text="Init" />
+      <TitledPane animated="false" text="List of channels">
+         <content>
+            <ListView fx:id="lvChannels" prefHeight="200.0" prefWidth="200.0" />
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" text="Actions">
+         <content>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="tfInsertChannel" />
+                  <Button fx:id="btInsert" mnemonicParsing="false" prefHeight="31.0" prefWidth="214.0" text="Insert" />
+                  <Button fx:id="btRemove" mnemonicParsing="false" prefHeight="31.0" prefWidth="247.0" text="Remove" />
+                  <Button fx:id="btClear" mnemonicParsing="false" prefHeight="31.0" prefWidth="270.0" text="Clear" />
+                  <Button fx:id="btShuffle" mnemonicParsing="false" prefHeight="31.0" prefWidth="327.0" text="Shuffle" />
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

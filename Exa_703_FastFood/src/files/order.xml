@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<order>
+  <orderNumber>1</orderNumber>
+  <orderDate>2025-06-06</orderDate>
+  <totalPrice>75.7</totalPrice>
+  <totalCalories>0</totalCalories>
+  <products>
+<product>
+      <type>class java.util.ArrayList</type>
+      <name>Ham Sandwich</name>
+      <price>4.5</price>
+<size>Medium</size>
+       <ingredients>
+      </ingredients>
+    </product>
+<product>
+      <type>class java.util.ArrayList</type>
+      <name>Lemonade</name>
+      <price>2.0</price>
+<volume>0.3</volume>
+       <ingredients>
+      </ingredients>
+    </product>
+<product>
+      <type>class java.util.ArrayList</type>
+      <name>Veggie Wrap</name>
+      <price>5.0</price>
+<size>Large</size>
+       <ingredients>
+      </ingredients>
+    </product>
+<product>
+      <type>class java.util.ArrayList</type>
+      <name>Cola</name>
+      <price>2.5</price>
+<volume>0.5</volume>
+       <ingredients>
+      </ingredients>
+    </product>
+<product>
+      <type>class java.util.ArrayList</type>
+      <name>Bacon Burger</name>
+      <price>6.0</price>
+<size>Large</size>
+       <ingredients>
+      </ingredients>
+    </product>
+<product>
+      <type>class java.util.ArrayList</type>
+      <name>Orange Juice</name>
+      <price>3.0</price>
+<volume>0.4</volume>
+       <ingredients>
+      </ingredients>
+    </product>
+<product>
+      <type>class java.util.ArrayList</type>
+      <name>Chicken Sub</name>
+      <price>5.5</price>
+<size>Medium</size>
+       <ingredients>
+      </ingredients>
+    </product>
+<product>
+      <type>class java.util.ArrayList</type>
+      <name>Water</name>
+      <price>1.0</price>
+<volume>0.5</volume>
+       <ingredients>
+      </ingredients>
+    </product>
+<product>
+      <type>class java.util.ArrayList</type>
+      <name>Egg Salad</name>
+      <price>4.0</price>
+<size>Small</size>
+       <ingredients>
+      </ingredients>
+    </product>
+<product>
+      <type>class java.util.ArrayList</type>
+      <name>Tea</name>
+      <price>1.5</price>
+<volume>0.3</volume>
+       <ingredients>
+      </ingredients>
+    </product>
+<product>
+      <type>class java.util.ArrayList</type>
+      <name>Tofu Bowl</name>
+      <price>6.5</price>
+<size>Large</size>
+       <ingredients>
+      </ingredients>
+    </product>
+<product>
+      <type>class java.util.ArrayList</type>
+      <name>Milkshake</name>
+      <price>3.5</price>
+<volume>0.4</volume>
+       <ingredients>
+      </ingredients>
+    </product>
+<product>
+      <type>class java.util.ArrayList</type>
+      <name>Avocado Toast</name>
+      <price>4.5</price>
+<size>Small</size>
+       <ingredients>
+      </ingredients>
+    </product>
+<product>
+      <type>class java.util.ArrayList</type>
+      <name>Herbal Tea</name>
+      <price>1.8</price>
+<volume>0.3</volume>
+       <ingredients>
+      </ingredients>
+    </product>
+<product>
+      <type>class java.util.ArrayList</type>
+      <name>Mozzarella Panini</name>
+      <price>5.2</price>
+<size>Medium</size>
+       <ingredients>
+      </ingredients>
+    </product>
+<product>
+      <type>class java.util.ArrayList</type>
+      <name>Smoothie</name>
+      <price>4.0</price>
+<volume>0.5</volume>
+       <ingredients>
+      </ingredients>
+    </product>
+<product>
+      <type>class java.util.ArrayList</type>
+      <name>Grilled Veggies</name>
+      <price>5.8</price>
+<size>Large</size>
+       <ingredients>
+      </ingredients>
+    </product>
+<product>
+      <type>class java.util.ArrayList</type>
+      <name>Sparkling Water</name>
+      <price>1.2</price>
+<volume>0.5</volume>
+       <ingredients>
+      </ingredients>
+    </product>
+<product>
+      <type>class java.util.ArrayList</type>
+      <name>Falafel Wrap</name>
+      <price>5.0</price>
+<size>Medium</size>
+       <ingredients>
+      </ingredients>
+    </product>
+<product>
+      <type>class java.util.ArrayList</type>
+      <name>Lassi</name>
+      <price>3.2</price>
+<volume>0.4</volume>
+       <ingredients>
+      </ingredients>
+    </product>
+  </products>
+</order>

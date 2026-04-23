@@ -1,0 +1,11 @@
+type,name,power,drumSize,brightness
+Fridge,Kitchen Fridge,180,,
+Fridge,Basement Freezer,250,,
+Fridge,Office Mini Fridge,120,,
+Washer,Bosch Eco Washer,2200,8,
+Washer,Samsung QuickDrive,2000,9,
+Washer,LG TurboWash,2100,7,
+Lamp,Living Room Lamp,75,,80
+Lamp,Desk Lamp,60,,70
+Lamp,Nightstand Lamp,40,,30
+Fridge,Pantry Beverage Cooler,160,,

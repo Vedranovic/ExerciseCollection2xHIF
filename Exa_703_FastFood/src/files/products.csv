@@ -1,0 +1,21 @@
+type,name,price,size_or_volume,ingredients
+Snack,Ham Sandwich,4.5,Medium,Cheese;Tomato;Ham
+Drink,Lemonade,2.0,0.3,Water;Sugar;Lemon
+Snack,Veggie Wrap,5.0,Large,Lettuce;Tomato;Onion
+Drink,Cola,2.5,0.5,Water;Sugar
+Snack,Bacon Burger,6.0,Large,Bacon;Cheese;Beef
+Drink,Orange Juice,3.0,0.4,Orange;Water;Sugar
+Snack,Chicken Sub,5.5,Medium,Chicken;Lettuce;Mayo
+Drink,Water,1.0,0.5,Water
+Snack,Egg Salad,4.0,Small,Egg;Mayonnaise;Onion
+Drink,Tea,1.5,0.3,Water;Sugar;Lemon
+Snack,Tofu Bowl,6.5,Large,Tofu;Avocado;Spinach
+Drink,Milkshake,3.5,0.4,Milk;Sugar;Cream
+Snack,Avocado Toast,4.5,Small,Avocado;Tomato;Salt
+Drink,Herbal Tea,1.8,0.3,Water;Mint;Ginger
+Snack,Mozzarella Panini,5.2,Medium,Mozzarella;Tomato;Basil
+Drink,Smoothie,4.0,0.5,Yogurt;Banana;Honey
+Snack,Grilled Veggies,5.8,Large,Zucchini;Eggplant;Pepper
+Drink,Sparkling Water,1.2,0.5,Water;Carbon Dioxide
+Snack,Falafel Wrap,5.0,Medium,Falafel;Lettuce;Yogurt
+Drink,Lassi,3.2,0.4,Yogurt;Sugar;Cardamom
