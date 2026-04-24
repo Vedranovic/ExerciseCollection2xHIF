@@ -19,18 +19,6 @@ public class SongController {
         Arrays.sort(songs, Comparator.nullsLast(Comparator.comparingDouble(Song::getLength)));
     }
 
-    public Interpret findInterpret(String name) {
-        for (Song song : songs) {
-            for (Interpret interpret : song.getInterprets()) {
-                if (name.equals(interpret.getName())) {
-                    return interpret;
-                }
-            }
-        }
-
-        return null;
-    }
-
     public void addSong(Song song) throws Exception {
         if (numOfSongs > 9) {
             throw new Exception("No more songs can be added!");
@@ -46,18 +34,12 @@ public class SongController {
             throw new Exception("No more songs can be added!");
         }
 
-        Interpret interpret = new Interpret(getNextInterpretId(), interpretName);
+        Interpret interpret = new Interpret(interpretName);
         song.clearInterprets();
         song.addingInterpret(interpret);
         songs[numOfSongs] = song;
         numOfSongs++;
         sortSongs();
-    }
-
-    private long getNextInterpretId() {
-
-
-        return 0;
     }
 
     public Song[] getSongs() {

@@ -3,11 +3,9 @@ package at.htlkaindorf.exa_407_musicapp.pojos;
 import java.util.Objects;
 
 public class Interpret {
-    private long interpretId;
     private String name;
 
-    public Interpret(long interpretId, String name) {
-        this.interpretId = interpretId;
+    public Interpret(String name) {
         this.name = name;
     }
 

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox fx:controller="at.htlkaindorf.exa_407_musicapp.controller.AppController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.htlkaindorf.exa_407_musicapp.controller.AppController">
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
@@ -29,10 +30,10 @@
                   <Label text="Interprets" GridPane.rowIndex="1" />
                   <Label text="Length" GridPane.rowIndex="2" />
                   <Label text="Release Date" GridPane.rowIndex="3" />
-                  <TextField fx:id="tfShowTitle" editable="false" GridPane.columnIndex="1" />
-                  <TextField fx:id="tfShowInterprets" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField fx:id="tfShowLength" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField fx:id="tfShowReleaseDate" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="tfShowTitle" disable="true" editable="false" GridPane.columnIndex="1" />
+                  <TextField fx:id="tfShowInterprets" disable="true" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="tfShowLength" disable="true" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="tfShowReleaseDate" disable="true" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                </children>
                <HBox.margin>
                   <Insets left="20.0" right="20.0" top="20.0" />

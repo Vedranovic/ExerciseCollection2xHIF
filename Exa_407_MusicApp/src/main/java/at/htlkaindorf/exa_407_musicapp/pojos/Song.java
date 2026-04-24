@@ -39,7 +39,11 @@ public class Song {
         try {
             for (Interpret interpret : interprets) {
                 if (interpret != null) {
-                    output.append(interpret).append(" | ");
+                    String[] tokens = interpret.getName().split(", ");
+
+                    for (int i = 0; i < tokens.length; i++) {
+                        output.append(tokens[i]).append(" | ");
+                    }
                 }
             }
 
