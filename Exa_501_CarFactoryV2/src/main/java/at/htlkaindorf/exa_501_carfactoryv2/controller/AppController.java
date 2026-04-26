@@ -43,49 +43,18 @@ public class AppController {
                 onCreate(actionEvent);
             }
         });
-
         btChange.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 onChange(actionEvent);
             }
         });
-
         btClear.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 onClear(actionEvent);
             }
         });
-    }
-
-    private void onCreate(Event event) {
-        if (tfBrand.getText().isBlank() || tfModel.getText().isBlank() || tfPrice.getText().isBlank() || tfReleaseDate.getText().isBlank()) {
-            alert.setContentText("Please fill out every field!");
-            alert.showAndWait();
-        } else {
-            try {
-                String dateString = tfReleaseDate.getText();
-                DateTimeFormatter inputForm = DateTimeFormatter.ofPattern("dd.MM.yyyy");
-                LocalDate releaseDate = LocalDate.parse(dateString, inputForm);
-
-                Car car = new Car(
-                        tfBrand.getText(),
-                        tfModel.getText(),
-                        Double.parseDouble(tfPrice.getText()),
-                        releaseDate
-                );
-
-                dataController.createCar(car);
-                taOutput.setText(dataController.printCars());
-            } catch (NumberFormatException nfe) {
-                alert.setContentText("The price value is not valid!");
-                alert.showAndWait();
-            } catch (DateTimeParseException dtpe) {
-                alert.setContentText("The date format is not correct!");
-                alert.showAndWait();
-            }
-        }
     }
 
     private void onChange(Event event) {
@@ -122,5 +91,37 @@ public class AppController {
         tfModel.setText("");
         tfPrice.setText("");
         tfReleaseDate.setText("");
+    }
+
+    private void onCreate(Event event) {
+        if (tfBrand.getText().isBlank() || tfModel.getText().isBlank() || tfPrice.getText().isBlank() || tfReleaseDate.getText().isBlank()) {
+            alert.setContentText("Please fill in all fields!");
+            alert.showAndWait();
+        } else {
+            try {
+                String dateString = tfReleaseDate.getText();
+                DateTimeFormatter inputForm = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+                LocalDate releaseDate = LocalDate.parse(dateString, inputForm);
+                Car car = new Car(
+                        tfBrand.getText(),
+                        tfModel.getText(),
+                        Double.parseDouble(tfPrice.getText()),
+                        releaseDate
+                );
+
+                dataController.createCar(car);
+                showData();
+            } catch (NumberFormatException nfe) {
+                alert.setContentText("The price value is not valid!");
+                alert.showAndWait();
+            } catch (DateTimeParseException dtpe) {
+                alert.setContentText("The date format is not correct!");
+                alert.showAndWait();
+            }
+        }
+    }
+
+    private void showData() {
+        taOutput.setText(dataController.printCars());
     }
 }

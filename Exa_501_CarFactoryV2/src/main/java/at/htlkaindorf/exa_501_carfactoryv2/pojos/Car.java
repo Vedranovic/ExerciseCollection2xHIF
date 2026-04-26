@@ -17,10 +17,8 @@ public class Car {
     }
 
     public String toString() {
-        DateTimeFormatter outputForm = DateTimeFormatter.ofPattern("MM/yyyy");
-        String formattedDate = releaseDate.format(outputForm);
-
-        return String.format("%s %s released in %s costs € %.2f", brand, model, formattedDate, price);
+        return String.format("%s %s released in %s costs € %.2f",
+                brand, model, releaseDate.format(DateTimeFormatter.ofPattern("MM/yyyy")), price);
     }
 
     public void setPrice(double price) {

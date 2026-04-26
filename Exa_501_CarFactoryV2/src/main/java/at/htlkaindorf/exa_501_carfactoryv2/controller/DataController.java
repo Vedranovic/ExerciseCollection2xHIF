@@ -17,15 +17,15 @@ public class DataController {
     }
 
     public String printCars() {
-        String output = "";
+        StringBuilder output = new StringBuilder();
 
         for (int i = 0; i < cars.size(); i++) {
             Car car = cars.get(i);
-            output += String.format("%d: ", i + 1);
-            output += car.toString() + "\n";
+            output.append(String.format("%d: ", i + 1));
+            output.append(car.toString()).append("\n");
         }
 
-        return output;
+        return output.toString();
     }
 
     public void changePriceOfCars(int index, double newPrice) throws ArrayIndexOutOfBoundsException {
