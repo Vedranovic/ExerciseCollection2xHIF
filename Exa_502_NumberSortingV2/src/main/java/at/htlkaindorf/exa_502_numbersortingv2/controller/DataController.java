@@ -52,7 +52,7 @@ public class DataController {
     }
 
     public void bubbleSort() {
-        int nSwaps = 0;
+        int nSwaps;
 
         do {
             nSwaps = 0;
@@ -69,22 +69,18 @@ public class DataController {
     }
 
     public String toString() {
-        String output = "";
+        StringBuilder output = new StringBuilder();
 
         for (int i = 0; i < numbers.size(); i++) {
-            output += numbers.get(i);
+            output.append(numbers.get(i));
 
             if ((i + 1) % 10 == 0) {
-                output += "\n";
+                output.append("\n");
             } else {
-                output += ", ";
+                output.append(", ");
             }
         }
 
-        return output;
-    }
-
-    public List<Integer> getNumbers() {
-        return numbers;
+        return output.toString();
     }
 }

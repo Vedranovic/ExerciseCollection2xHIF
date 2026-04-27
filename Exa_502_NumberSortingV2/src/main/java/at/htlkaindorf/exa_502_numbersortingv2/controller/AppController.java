@@ -39,7 +39,6 @@ public class AppController {
                 onSort(actionEvent);
             }
         });
-
         btGenerate.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -74,14 +73,13 @@ public class AppController {
         if (tfElements.getText().isBlank()) {
             errorAlert.setContentText("Please enter a valid number!");
             errorAlert.showAndWait();
-            return;
-        }
-
-        try {
-            dataController.generateNumbers(Integer.parseInt(tfElements.getText()));
-            taOutput.appendText(dataController.toString());
-        } catch (NumberFormatException nfe) {
-            errorAlert.setContentText("Enter only numbers!");
+        } else {
+            try {
+                dataController.generateNumbers(Integer.parseInt(tfElements.getText()));
+                taOutput.appendText(dataController.toString());
+            } catch (NumberFormatException nfe) {
+                errorAlert.setContentText("Enter only numbers!");
+            }
         }
     }
 }
