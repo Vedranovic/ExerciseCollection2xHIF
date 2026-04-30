@@ -42,14 +42,14 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="144.0" prefWidth="161.0" spacing="10.0">
                      <children>
-                        <TextField fx:id="tfShowName" disable="true" />
-                        <TextField fx:id="tfShowPosition" disable="true" />
+                        <TextField fx:id="tfShowName" disable="true" editable="false" />
+                        <TextField fx:id="tfShowPosition" disable="true" editable="false" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="144.0" prefWidth="112.0" spacing="10.0">
                      <children>
-                        <Button fx:id="btUp" mnemonicParsing="false" text="^" />
-                        <Button fx:id="btDown" mnemonicParsing="false" text="v" />
+                        <Button fx:id="btUp" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" text="^" />
+                        <Button fx:id="btDown" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" text="v" />
                      </children>
                   </VBox>
                </children>

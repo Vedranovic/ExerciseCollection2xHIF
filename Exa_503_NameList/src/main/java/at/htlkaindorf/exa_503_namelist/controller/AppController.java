@@ -28,81 +28,74 @@ public class AppController {
     private Alert errorAlert;
 
     public void initialize() {
-        currentPosition = 0;
+        currentPosition = 1;
         dataController = new DataController();
         errorAlert = new Alert(Alert.AlertType.ERROR);
-
         updateList();
-        btInsert.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                onInsert();
-                updateList();
-            }
-        });
-
-        btDelete.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                onDelete();
-                updateList();
-            }
-        });
 
         btUp.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(ActionEvent actionEvent) {
+            public void handle(ActionEvent event) {
                 onUp();
-                updateList();
             }
         });
-
         btDown.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(ActionEvent actionEvent) {
+            public void handle(ActionEvent event) {
                 onDown();
-                updateList();
+            }
+        });
+        btInsert.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                onInsert();
+            }
+        });
+        btDelete.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                onDelete();
             }
         });
     }
 
     private void onUp() {
-        if (currentPosition < dataController.getNames().size() - 1) {
+        if (!(currentPosition >= dataController.getNames().size())) {
             currentPosition++;
-            tfShowName.setText(dataController.getNames().get(currentPosition));
+            updateList();
         }
     }
 
     private void onDown() {
-        if (currentPosition > 0) {
+        if (currentPosition > 1) {
             currentPosition--;
-            tfShowName.setText(dataController.getNames().get(currentPosition));
+            updateList();
         }
     }
 
     private void onInsert() {
-        if (tfName.getText().isBlank()) {
+        if (tfName.getText().isEmpty()) {
             errorAlert.setContentText("Please insert a name!");
             errorAlert.showAndWait();
         } else {
             dataController.addName(tfName.getText());
+
+            if (dataController.getNames().size() - 1 == currentPosition && dataController.getNames().size() == 1) {
+                currentPosition++;
+            }
+
+            updateList();
         }
     }
 
     private void onDelete() {
-        String name = tfName.getText();
-        boolean isInList = false;
+        if (dataController.delete(tfName.getText())) {
+            dataController.getNames().remove(tfName.getText());
 
-        for (int i = 0; i < dataController.getNames().size(); i++) {
-            if (name.equals(dataController.getNames().get(i))) {
-                isInList = true;
-                break;
+            if (dataController.getNames().size() == currentPosition - 1) {
+                currentPosition--;
             }
-        }
 
-        if (isInList) {
-            dataController.getNames().remove(name);
-            currentPosition--;
             updateList();
         } else {
             errorAlert.setContentText("The name did not exist!");
@@ -115,8 +108,8 @@ public class AppController {
             tfShowName.setText("");
             tfShowPosition.setText("0 of 0");
         } else {
-            tfShowName.setText(dataController.getNames().get(currentPosition));
-            tfShowPosition.setText((currentPosition + 1) + " of " + dataController.getNames().size());
+            tfShowName.setText(dataController.getElementAtIndex(currentPosition - 1));
+            tfShowPosition.setText(currentPosition + " of " + dataController.getNames().size());
         }
     }
 }

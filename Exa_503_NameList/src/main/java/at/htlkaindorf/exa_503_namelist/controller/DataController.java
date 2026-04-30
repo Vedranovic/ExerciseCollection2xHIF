@@ -7,7 +7,7 @@ public class DataController {
     private List<String> names;
 
     public DataController() {
-        names = new LinkedList<>();
+        this.names = new LinkedList<>();
     }
 
     public void addName(String name) {
@@ -15,7 +15,7 @@ public class DataController {
     }
 
     public boolean delete(String name) {
-        return names.remove(name);
+        return names.contains(name);
     }
 
     public String getElementAtIndex(int index) {
