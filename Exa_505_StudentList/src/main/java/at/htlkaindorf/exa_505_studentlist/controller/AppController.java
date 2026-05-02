@@ -1,6 +1,5 @@
 package at.htlkaindorf.exa_505_studentlist.controller;
 
-
 import at.htlkaindorf.exa_505_studentlist.exception.DuplicateStudentException;
 import at.htlkaindorf.exa_505_studentlist.pojos.Student;
 import javafx.collections.FXCollections;
@@ -30,7 +29,6 @@ public class AppController {
 
     private DataController dataController;
     private Alert errorAlert;
-    private static final DateTimeFormatter DTF = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
     public void initialize() {
         dataController = new DataController();
@@ -43,7 +41,6 @@ public class AppController {
                 onInsert(actionEvent);
             }
         });
-
         btDelete.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -59,12 +56,12 @@ public class AppController {
         String lastName = tfLastName.getText();
         String dateOfBirth = tfDateOfBirth.getText();
 
-        if (firstName.isBlank() || lastName.isBlank() || dateOfBirth.isBlank()) {
+        if (firstName.isEmpty() || lastName.isEmpty() || dateOfBirth.isEmpty()) {
             errorAlert.setContentText("Please fill in all fields");
             errorAlert.showAndWait();
         } else {
             try {
-                LocalDate birthDate = LocalDate.parse(dateOfBirth, DTF);
+                LocalDate birthDate = LocalDate.parse(dateOfBirth, DateTimeFormatter.ofPattern("dd.MM.yyyy"));
                 Student student = new Student(firstName, lastName, birthDate);
                 dataController.addStudent(student);
             } catch (DateTimeParseException dtpe) {
@@ -78,10 +75,11 @@ public class AppController {
     }
 
     public void onDelete(ActionEvent actionEvent) {
-        ObservableList<Student> studentList = FXCollections.observableList(lvStudents.getSelectionModel().getSelectedItems());
-
-        for (Student student : studentList) {
-            dataController.deleteStudent(student);
+        if (lvStudents.getSelectionModel().getSelectedIndex() >= 0) {
+            dataController.deleteStudent(lvStudents.getSelectionModel().getSelectedIndex());
+        } else {
+            errorAlert.setContentText("Nothing was selected!");
+            errorAlert.showAndWait();
         }
     }
 }

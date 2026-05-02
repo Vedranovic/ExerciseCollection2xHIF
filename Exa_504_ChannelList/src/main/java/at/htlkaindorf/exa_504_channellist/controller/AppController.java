@@ -37,28 +37,24 @@ public class AppController {
                 onInit();
             }
         });
-
         btInsert.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 onInsert();
             }
         });
-
         btRemove.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 onRemove();
             }
         });
-
         btClear.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 onClear();
             }
         });
-
         btShuffle.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -71,40 +67,31 @@ public class AppController {
         lvChannels.setItems(FXCollections.observableList(dataController.getChannels()));
     }
 
-    private void onInit() {
+    public void onInit() {
         try {
-            dataController.addChannel("ORF 1");
-            dataController.addChannel("ORF 2");
-            dataController.addChannel("ORF 3");
-            dataController.addChannel("Super RTL");
-        } catch (Exception e) {
-            errorAlert.setContentText(e.getMessage());
-            errorAlert.showAndWait();
-        }
-
-        lvChannels.getItems().addAll("ORF 1", "ORF 2", "ORF 3", "Super RTL");
-        updateData();
-    }
-
-    private void onInsert() {
-        String input = tfInsertChannel.getText();
-        int index = lvChannels.getSelectionModel().getSelectedIndex();
-
-        try {
-            if (index >= 0) {
-                dataController.addChannel(input, index);
-            } else {
-                dataController.addChannel(input);
+            if (dataController.addChannel("ORF 1")
+                    && dataController.addChannel("ORF 2")
+                    && dataController.addChannel("ORF 3")
+                    && dataController.addChannel("Super RTL")) {
+                updateData();
             }
         } catch (Exception e) {
             errorAlert.setContentText(e.getMessage());
             errorAlert.showAndWait();
         }
+    }
 
+    public void onClear() {
+        tfInsertChannel.setText("");
+        lvChannels.getItems().clear();
+    }
+
+    public void onShuffle() {
+        dataController.shuffleList();
         updateData();
     }
 
-    private void onRemove() {
+    public void onRemove() {
         List<String> selectedValues = lvChannels.getSelectionModel().getSelectedItems();
 
         for (String selectedValue : selectedValues) {
@@ -113,13 +100,23 @@ public class AppController {
         updateData();
     }
 
-    private void onClear() {
-        tfInsertChannel.setText("");
-        lvChannels.getItems().clear();
-    }
+    public void onInsert() {
+        String input = tfInsertChannel.getText();
+        int index = lvChannels.getSelectionModel().getSelectedIndex();
 
-    private void onShuffle() {
-        dataController.shuffleList();
-        updateData();
+        try {
+            if (index >= 0) {
+                if (dataController.addChannel(input, index)) {
+                    updateData();
+                }
+            } else {
+                if (dataController.addChannel(input)) {
+                    updateData();
+                }
+            }
+        } catch (Exception e) {
+            errorAlert.setContentText(e.getMessage());
+            errorAlert.showAndWait();
+        }
     }
 }

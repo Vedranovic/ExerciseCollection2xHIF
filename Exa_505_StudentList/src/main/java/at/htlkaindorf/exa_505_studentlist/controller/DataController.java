@@ -18,10 +18,6 @@ public class DataController {
         students.remove(index);
     }
 
-    public void deleteStudent(Student student) {
-        students.remove(student);
-    }
-
     public void addStudent(Student student) {
         if (!students.contains(student)) {
             students.add(student);

@@ -9,8 +9,6 @@ public class Student implements Comparable<Student> {
     private String lastName;
     private LocalDate birthDate;
 
-    private static final DateTimeFormatter DTF = DateTimeFormatter.ofPattern("dd.MMMyyyy");
-
     public Student(String firstName, String lastName, LocalDate birthDate) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -19,7 +17,7 @@ public class Student implements Comparable<Student> {
 
     @Override
     public String toString() {
-        return firstName + ", " + lastName + " - " + birthDate.format(DTF);
+        return firstName + ", " + lastName + " - " + birthDate.format(DateTimeFormatter.ofPattern("dd.MMMyyyy"));
     }
 
     @Override

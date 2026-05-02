@@ -1,7 +1,5 @@
 package at.htlkaindorf.exa_504_channellist.controller;
 
-import javafx.scene.control.Alert;
-
 import java.util.*;
 
 public class DataController {
@@ -12,31 +10,25 @@ public class DataController {
     }
 
     public boolean addChannel(String channel) throws Exception {
-        if (!isChannelInList(channel)) {
-            channels.add(channel);
-            return true;
-        } else {
+        if (isChannelInList(channel)) {
             throw new Exception("The channel already exists!");
         }
+        channels.add(channel);
+
+        return true;
     }
 
-    public boolean addChannel(String channel, int index) throws Exception{
-        if (!isChannelInList(channel)) {
-            channels.add(index, channel);
-            return true;
-        } else {
+    public boolean addChannel(String channel, int index) throws Exception {
+        if (isChannelInList(channel)) {
             throw new Exception("The channel already exists!");
         }
+        channels.add(index, channel);
+
+        return true;
     }
 
     private boolean isChannelInList(String channel) {
-        for (String s : channels) {
-            if (channel.equals(s)) {
-                return true;
-            }
-        }
-
-        return false;
+        return channels.contains(channel);
     }
 
     public void shuffleList() {
