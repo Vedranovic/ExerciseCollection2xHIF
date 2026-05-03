@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.htlkaindorf.exa_506_contactmanagement.controller.AppController">
+   <children>
+      <TitledPane prefHeight="200.0" prefWidth="200.0" text="All Contacts">
+         <content>
+            <ListView fx:id="lvContacts" prefHeight="200.0" prefWidth="200.0">
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem fx:id="miPrivate" mnemonicParsing="false" text="private" />
+                        <MenuItem fx:id="miBusiness" mnemonicParsing="false" text="business" />
+                        <MenuItem fx:id="miAll" mnemonicParsing="false" text="all" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu></ListView>
+         </content>
+      </TitledPane>
+      <TitledPane prefHeight="200.0" prefWidth="200.0" text="Input">
+         <content>
+            <GridPane hgap="7.0" vgap="7.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="btSave" mnemonicParsing="false" prefHeight="31.0" prefWidth="414.0" text="SAVE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btDelete" mnemonicParsing="false" prefHeight="31.0" prefWidth="412.0" text="DELETE" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+                  <Label alignment="CENTER_RIGHT" prefHeight="21.0" prefWidth="213.0" text="Name:" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="21.0" prefWidth="451.0" text="Number:" GridPane.rowIndex="2" />
+                  <RadioButton fx:id="rbPrivate" mnemonicParsing="false" selected="true" text="Private" GridPane.rowIndex="3">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Contact" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="rbBusiness" mnemonicParsing="false" text="Buisness" toggleGroup="$Contact" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="tfNumber" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="tfName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+         </content>
+      </TitledPane>
+   </children>
+</VBox>

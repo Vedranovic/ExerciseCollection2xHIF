@@ -17,7 +17,7 @@ public class Student implements Comparable<Student> {
 
     @Override
     public String toString() {
-        return firstName + ", " + lastName + " - " + birthDate.format(DateTimeFormatter.ofPattern("dd.MMMyyyy"));
+        return String.format("%s, %s - %s", firstName, lastName, birthDate.format(DateTimeFormatter.ofPattern("dd.MMMyyyy")));
     }
 
     @Override
