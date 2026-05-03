@@ -13,10 +13,14 @@ public class DataController {
     }
 
     public void addContact(Contact contact) {
-
+        contacts.add(contact);
     }
 
     public void deleteContact(Contact contact) {
+        contacts.remove(contact);
+    }
 
+    public List<Contact> getContacts() {
+        return contacts;
     }
 }

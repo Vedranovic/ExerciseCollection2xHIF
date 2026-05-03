@@ -1,18 +1,18 @@
 package at.htlkaindorf.exa_506_contactmanagement.pojos;
 
-public class Contact {
+public class Contact implements Comparable<Contact> {
     private String name;
-    private long number;
+    private String number;
     private boolean isPrivate;
 
-    public Contact(String name, long number, boolean isPrivate) {
+    public Contact(String name, String number, boolean isPrivate) {
         this.name = name;
         this.number = number;
         this.isPrivate = isPrivate;
     }
 
     public String toString() {
-        return ;
+        return String.format("%s %20s", name, getFormattedNumber());
     }
 
     private String getFormattedNumber() {
@@ -32,7 +32,8 @@ public class Contact {
         return formattedNumber.toString();
     }
 
-    public static void main(String[] args) {
-
+    @Override
+    public int compareTo(Contact o) {
+        return this.name.compareTo(o.name);
     }
 }

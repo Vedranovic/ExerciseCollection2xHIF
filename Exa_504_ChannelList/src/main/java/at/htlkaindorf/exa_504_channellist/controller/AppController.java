@@ -6,6 +6,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AppController {
@@ -30,6 +31,7 @@ public class AppController {
     public void initialize() {
         dataController = new DataController();
         errorAlert = new Alert(Alert.AlertType.ERROR);
+        lvChannels.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 
         btInit.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -92,7 +94,7 @@ public class AppController {
     }
 
     public void onRemove() {
-        List<String> selectedValues = lvChannels.getSelectionModel().getSelectedItems();
+        List<String> selectedValues = new ArrayList<>(lvChannels.getSelectionModel().getSelectedItems());
 
         for (String selectedValue : selectedValues) {
             dataController.removeChannel(selectedValue);
