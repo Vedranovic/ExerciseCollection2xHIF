@@ -50,7 +50,7 @@
                      <toggleGroup>
                         <ToggleGroup fx:id="Contact" />
                      </toggleGroup></RadioButton>
-                  <RadioButton fx:id="rbBusiness" mnemonicParsing="false" text="Buisness" toggleGroup="$Contact" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <RadioButton fx:id="rbBusiness" mnemonicParsing="false" text="Business" toggleGroup="$Contact" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <TextField fx:id="tfNumber" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <TextField fx:id="tfName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                </children>

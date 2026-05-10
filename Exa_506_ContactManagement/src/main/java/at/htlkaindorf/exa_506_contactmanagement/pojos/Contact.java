@@ -36,4 +36,8 @@ public class Contact implements Comparable<Contact> {
     public int compareTo(Contact o) {
         return this.name.compareTo(o.name);
     }
+
+    public boolean isPrivate() {
+        return isPrivate;
+    }
 }
