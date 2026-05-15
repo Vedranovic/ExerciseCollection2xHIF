@@ -15,7 +15,7 @@ public class DataController {
 
     public void addRecipe(Recipe recipe) {
         if (recipeList.contains(recipe)) {
-            throw new DuplicateRecipeException("This recipe already exists!");
+            throw new DuplicateRecipeException("This recipe does already exists!");
         }
 
         recipeList.add(recipe);

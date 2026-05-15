@@ -14,6 +14,11 @@ public class Ingredient implements Comparable<Ingredient> {
     }
 
     @Override
+    public String toString() {
+        return String.format("%d %s %s", amount, unit, name);
+    }
+
+    @Override
     public int compareTo(Ingredient o) {
         if (this.unit.equals(o.unit)) {
             return this.amount - o.amount;
@@ -34,15 +39,11 @@ public class Ingredient implements Comparable<Ingredient> {
         return Objects.hashCode(name);
     }
 
-    public int getAmount() {
-        return amount;
-    }
-
     public String getName() {
         return name;
     }
 
-    public String getUnit() {
-        return unit;
+    public int getAmount() {
+        return amount;
     }
 }

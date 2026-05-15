@@ -1,24 +1,23 @@
 package at.htlkaindorf.exa_507_recipemanagement.pojos;
 
 import at.htlkaindorf.exa_507_recipemanagement.exceptions.DuplicateIngredientException;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Recipe implements Comparable<Recipe> {
+    private List<Ingredient> ingredients;
     private String name;
-    private LocalDate createDate;
     private int productionTime;
     private String author;
-    private ObservableList<Ingredient> ingredients;
 
-    public Recipe(int productionTime, String author, String name) {
+    public Recipe(String name, int productionTime, String author) {
+        this.ingredients = new ArrayList<>();
+        this.name = name;
         this.productionTime = productionTime;
         this.author = author;
-        this.name = name;
-        ingredients = FXCollections.observableArrayList();
     }
 
     public void addIngredient(Ingredient ingredient) {
@@ -27,17 +26,11 @@ public class Recipe implements Comparable<Recipe> {
         }
 
         ingredients.add(ingredient);
-        FXCollections.sort(ingredients);
     }
 
     @Override
     public String toString() {
-        return String.format("%s from %s - 0 ingredients - %d minutes", name, author, productionTime);
-    }
-
-    @Override
-    public int compareTo(Recipe o) {
-        return o.author.compareTo(this.author);
+        return String.format("%s from %s - %d ingredients - %d minutes", name, author, ingredients.size(), productionTime);
     }
 
     @Override
@@ -50,5 +43,14 @@ public class Recipe implements Comparable<Recipe> {
     @Override
     public int hashCode() {
         return Objects.hash(name, author);
+    }
+
+    @Override
+    public int compareTo(Recipe o) {
+        return this.name.compareTo(o.name);
+    }
+
+    public List<Ingredient> getIngredients() {
+        return ingredients;
     }
 }
